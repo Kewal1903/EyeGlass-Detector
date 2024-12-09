@@ -89,7 +89,7 @@ predictions = Dense(2, activation='softmax')(x)
 model = Model(inputs=base_model.input, outputs=predictions)
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-model.fit(X_train, y_train, epochs=200, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, epochs=20, validation_data=(X_test, y_test))
 
 face_cascade = cv.CascadeClassifier(cv.data.haarcascades + 'haarcascade_frontalface_default.xml')
 
